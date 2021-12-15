@@ -1,5 +1,5 @@
 {
-  "name": "asana",
+  "name": "apiology-fork-asana",
   "version": "0.18.11",
   "description": "Official NodeJS and BrowserJS client for the Asana API",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Asana/node-asana.git"
+    "url": "git://github.com/apiology/node-asana.git"
   },
   "keywords": [
     "asana",
