@@ -1,7 +1,7 @@
 # apiology-fork-node-asana
 
 This is my fork of the node-asana repo.  It publishes an npm package
-named `apiology-fork-node-asana`
+named `apiology-fork-asana`
 
 It includes the following fixes which haven't yet been merged upstream:
 
