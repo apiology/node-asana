@@ -1,3 +1,12 @@
+# apiology-fork-node-asana
+
+This is my fork of the node-asana repo.  It publishes an npm package
+named `apiology-fork-node-asana`
+
+It includes the following fixes which haven't yet been merged upstream:
+
+* (none yet)
+
 # Asana [![GitHub release][release-image]]() [![Build Status][travis-image]][travis-url] [![NPM Version][npm-image]][npm-url]
 
 A JavaScript client (for both Node and browser) for the Asana API v1.0.
@@ -33,11 +42,11 @@ Include the latest release directly from GitHub.
   are reported by the server. We include custom Error types which contain
   the response from the server.
 - **Promises** Promises with [bluebird][bluebird] seem like the most neutral way
-  to support node's various async paradigms. If you want Promises, you get them 
+  to support node's various async paradigms. If you want Promises, you get them
   by default. If you want callbacks, bluebird promises support `nodeify`, which
   takes a callback as parameter. For generators and streams, [co][co] and
   [highland][highland] also support promises, respectively. Beyond that, other
-  major libraries such as mongoose, mocha, and elastic search (which uses 
+  major libraries such as mongoose, mocha, and elastic search (which uses
   bluebird) also support Promises.
 
 ## Usage
@@ -123,12 +132,12 @@ Asana.Client.create({
   });
 ```
 
-When a request comes to your server, verify it's a valid request (either using your own login cookie, cors, etc.). Then 
-take the body, add your `client_secret` to it, and send a POST request with the body to 
-`https://app.asana.com/-/oauth_token`. This will give your server the access and refresh tokens. Either return the 
+When a request comes to your server, verify it's a valid request (either using your own login cookie, cors, etc.). Then
+take the body, add your `client_secret` to it, and send a POST request with the body to
+`https://app.asana.com/-/oauth_token`. This will give your server the access and refresh tokens. Either return the
 access_token to the browser, or keep it on your server if your server handles requests to Asana.
 
-Here is an [express example](https://github.com/Asana/devrel-examples/blob/master/javascript/pkce_oauth/server/index.js) 
+Here is an [express example](https://github.com/Asana/devrel-examples/blob/master/javascript/pkce_oauth/server/index.js)
 for AWS Lambda that works as an app server.
 
 Your client side code will look similar to the [webserver](https://github.com/Asana/node-asana/blob/master/examples/oauth/webserver/oauth_webserver.js)
@@ -138,7 +147,7 @@ example, but with client side routing instead of express.
 
 Whenever you ask for a collection of resources, you will receive a `Collection`
 object which gives you access to a page of results at a time. You can provide
-a number of results per page to fetch, between `1` and `100`. 
+a number of results per page to fetch, between `1` and `100`.
 
 It defaults to `50` if you don't provide any.
 
@@ -284,15 +293,15 @@ client.users.me()
 
 ## Documentation
 
-The code is thoroughly documented with JSDoc tags. The 
-[Official Asana Documentation][asana-doc] is a great resource, since this is 
+The code is thoroughly documented with JSDoc tags. The
+[Official Asana Documentation][asana-doc] is a great resource, since this is
 just a thin wrapper for the API.
 
 ## Contributing
 
 Feel free to fork and submit pull requests for the code! Please follow the
 existing code as an example of style, and make sure that all your code passes
-lint and tests. 
+lint and tests.
 
 For a sanity check:
 
@@ -306,7 +315,7 @@ npm test
 ### Code generation
 
 The specific Asana resource classes within the gen folder (`Tag`, `Workspace`, `Task`, etc.) are
-generated code, hence they shouldn't be modified by hand. 
+generated code, hence they shouldn't be modified by hand.
 
 See our [openapi spec][https://github.com/Asana/developer-docs/blob/master/defs/asana_oas.yaml] and [swagger](https://github.com/swagger-api/swagger-codegen) for details.
 
@@ -318,7 +327,7 @@ See our [openapi spec][https://github.com/Asana/developer-docs/blob/master/defs/
   2. Clone the repo; work on `master`.
   3. Bump the package version to indicate the [semantic version](http://semver.org) change, using one of: `gulp bump-patch`, `gulp bump-feature`, or `gulp bump-release`
   4. Push changes to origin, including tags:
-     `git push origin master --tags` 
+     `git push origin master --tags`
 
 Travis CI will automatically build and deploy the tagged release.
 
