@@ -1,7 +1,7 @@
 {
   "name": "apiology-fork-asana",
-  "version": "0.18.11",
-  "description": "Official NodeJS and BrowserJS client for the Asana API",
+  "version": "1.0.0",
+  "description": "Fork of the official NodeJS and BrowserJS client for the Asana API",
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/gulp test"
